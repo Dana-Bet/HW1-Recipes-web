@@ -1,0 +1,107 @@
+///////////////////////// Template ////////////////////////
+
+:root {
+    --background-color: #fff;
+    --background-light: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --primary-color: rgba(141, 11, 54, 0.713);
+    --text-color: #0A0A0A;
+    --text-light: #575757;
+    --font-size: 16px;
+    --animation-speed: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    object-fit: cover;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: .5em 1em;
+    margin: 1em 0 1em 0;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px var(--shadow-color);
+    &:hover {
+        box-shadow: 0 1px 3px var(--shadow-color)
+    }
+}
+
+.custom-img {
+    background-color: red;
+    height: 0;
+    width: 100%;
+    position: relative;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Importing the navbar scss
+@import "partials/navbar_.scss";
+
+.container {
+    padding-inline: 20vw;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+
+    .title {
+        color: var(--text-color);
+        font-size: 4em;
+        margin-bottom: .5em;
+    }
+
+    .info {
+        color: var(--text-light);
+        font-size: 1.3em;
+        margin-bottom: .5em;
+        letter-spacing: 1px;
+        line-height: 1.2;
+    }
+
+    .col {
+        width: 50%;
+    }
+}
+
+///////////////////////// End Of Template ////////////////////////
+
+.section.home {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2vw;
+    }
+}
+
+.main {
+    padding-block: 3vw;
+}
