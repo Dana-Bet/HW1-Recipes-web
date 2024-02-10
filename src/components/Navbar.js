@@ -31,7 +31,7 @@ export default function NavBar({ currentPage, onPageChange }) {
 
     return (
         <div className="navbar container">
-            <a href="#!" className="logo">F<span>oo</span>dies</a>
+            <a href="#!" className="logo">Yu<span>mm</span>y</a>
             <div className="nav-links">
                 {links.map(link => (
                     <a

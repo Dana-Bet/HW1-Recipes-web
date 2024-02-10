@@ -7,6 +7,7 @@ import Recipes from "./pages/Recipes";
 import PlanMeal from "./pages/Plan";
 import Share from "./pages/Share";
 import Shopping from "./pages/Shopping";
+import Footer from './components/Footer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('Home'); // Base state in the main page
@@ -19,6 +20,7 @@ function App() {
   return (
     <div>
       <NavBar currentPage={currentPage} onPageChange={handlePageChange} />
+      
       <div className="container main">
         {currentPage === 'Home' && <Home />}
         {currentPage === 'Recipes' && <Recipes />}
@@ -26,7 +28,9 @@ function App() {
         {currentPage === 'Share' && <Share />}
         {currentPage === 'Shopping' && <Shopping />}
       </div>
-      <div>Footer</div>
+
+      <Footer />
+      
     </div>
   );
 }

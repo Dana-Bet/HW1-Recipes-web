@@ -1,5 +1,7 @@
-export default function CustomImage({src, pt}) {
+export default function CustomImage({imgsrc, pt}) {
     return (
-        <img classname="custom-img" src={src} alt=""></img>
+        <div className="custom-img" style={{paddingTop: pt}}>
+            <img src={imgsrc} alt="" />
+        </div>
     )
 }
