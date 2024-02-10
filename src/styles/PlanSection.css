@@ -57,3 +57,49 @@
     letter-spacing: 1px; /* Increase letter spacing for readability */
     font-family: 'Arial', sans-serif; /* Use a clean sans-serif font */
 }
+
+/* Styles for individual dishes */
+.dish-container {
+    max-height: 200px; /* Set maximum height for the dish container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Add a border for visibility */
+    padding: 5px; /* Add some padding for better appearance */
+    margin-bottom: 10px; /* Add space between dish containers */
+}
+
+
+/* Adjustments for scrollbar appearance */
+.dish-container::-webkit-scrollbar {
+    width: 8px; /* Set width for scrollbar */
+}
+
+.dish-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Set color for scrollbar thumb */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+}
+/* Styles for the recipe */
+.recipe {
+    margin-bottom: 20px;
+}
+
+/* Styles for the recipe image */
+.recipe-image {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add space below the image */
+}
+
+/* Styles for the "Add to the meal" button */
+.add-to-meal {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    cursor: pointer; /* Add cursor on hover */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    transition: background-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.add-to-meal:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
