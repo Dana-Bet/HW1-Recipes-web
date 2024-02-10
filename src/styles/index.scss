@@ -23,6 +23,8 @@
 body {
     font-size: var(--font-size);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    overflow-y: auto; /* Enable vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 a {

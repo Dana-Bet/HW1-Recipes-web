@@ -1,28 +1,59 @@
-/* Styles for the container */
-.container {
-    max-width: 1640px;
-    margin: 0 auto;
-    padding: 20px;
+.section.plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
 }
 
 /* Styles for the image container */
 .image-container {
-    max-height: 500px;
     position: relative;
+    max-height: 400px; /* Set a maximum height for the image */
+    overflow: hidden; /* Hide any overflow content */
 }
 
+/* Styles for the image */
+.cus_img {
+    width: 100%;
+    height: auto; /* Allow the image to maintain its aspect ratio */
+}
 /* Styles for the overlay */
 .overlay {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(58, 57, 57, 0.75);
     padding: 20px;
+    width: 100%; /* Ensure overlay spans the entire width */
 }
 
 /* Styles for the overlay text */
 .overlay h1 {
     color: #eee;
-    font-size: 36px;
+    font-size: 24px; /* Adjust font size as needed */
     margin: 0;
+}
+
+/* Styles for the content */
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensure content spans the entire width */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Styles for the columns */
+.column {
+    flex: 0 0 45%; /* Set width for columns */
+}
+
+.row-title {
+    font-size: 24px; /* Set the font size for the row titles */
+    font-weight: bold; /* Make the titles bold */
+    color: #272927; /* A nice green color, feel free to change */
+    text-transform: uppercase; /* Convert text to uppercase for a stylish appearance */
+    margin-bottom: 5px; /* Add some space between titles and content */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    letter-spacing: 1px; /* Increase letter spacing for readability */
+    font-family: 'Arial', sans-serif; /* Use a clean sans-serif font */
 }
