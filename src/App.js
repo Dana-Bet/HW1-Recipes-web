@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import NavBar from "./components/Navbar";
 import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
-import PlanMeal from "./pages/Plan";
+import Plan from "./pages/Plan";
 import Share from "./pages/Share";
 import Shopping from "./pages/Shopping";
 
@@ -22,11 +22,10 @@ function App() {
       <div className="container main">
         {currentPage === 'Home' && <Home />}
         {currentPage === 'Recipes' && <Recipes />}
-        {currentPage === 'Plan Meal' && <PlanMeal />}
+        {currentPage === 'Plan Your Meal' && <Plan />}
         {currentPage === 'Share' && <Share />}
         {currentPage === 'Shopping' && <Shopping />}
       </div>
-      <div>Footer</div>
     </div>
   );
 }

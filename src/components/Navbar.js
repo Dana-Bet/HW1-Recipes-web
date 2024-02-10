@@ -11,7 +11,7 @@ export default function NavBar({ currentPage, onPageChange }) {
             path: "/Recipe"
         },
         {
-            name: "Plan Meal",
+            name: "Plan Your Meal",
             path: "/Plan"
         },
         {

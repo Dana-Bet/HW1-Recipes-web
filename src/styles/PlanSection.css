@@ -1,0 +1,28 @@
+/* Styles for the container */
+.container {
+    max-width: 1640px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styles for the image container */
+.image-container {
+    max-height: 500px;
+    position: relative;
+}
+
+/* Styles for the overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+}
+
+/* Styles for the overlay text */
+.overlay h1 {
+    color: #eee;
+    font-size: 36px;
+    margin: 0;
+}
