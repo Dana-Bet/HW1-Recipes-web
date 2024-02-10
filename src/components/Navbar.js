@@ -1,40 +1,49 @@
-// import { Link, useLocation } from "react-router-dom"
+import React from 'react';
 
-export default function NavBar() {
-    // const location = useLocation()
+export default function NavBar({ currentPage, onPageChange }) {
     const links = [
         {
             name: "Home",
-            path: "/pages/Home.js"
+            path: "/Home"
         },
         {
-            name: "Create A Recipe",
-            path: "/pages/Recipe.js"
+            name: "Recipes",
+            path: "/Recipe"
         },
         {
-            name: "Share A Recipe",
+            name: "Plan Meal",
+            path: "/Plan"
+        },
+        {
+            name: "Share",
             path: "/Share"
         },
         {
             name: "Shopping",
             path: "/Shopping"
-        },
-        {
-            name: "Nutritional Info",
-            path: "/Nutritional"
         }
-    ]
+    ];
+
+    const handleLinkClick = (event, pageName) => {
+        event.preventDefault(); // Prevent default behavior of hyperlink
+        onPageChange(pageName); // Update the current page
+    };
+
     return (
         <div className="navbar container">
             <a href="#!" className="logo">F<span>oo</span>dies</a>
             <div className="nav-links">
-                {
-                    links.map(link => (
-                        <a href={link.path} key={link.name}>{link.name}</a>
-                        // <Link className={location.pathname === link.path ? "active" : ""} to={link.path} key={link.name}>{link.name}</Link>
-                    ))
-                }
+                {links.map(link => (
+                    <a
+                        href={link.path}
+                        key={link.name}
+                        className={currentPage === link.name ? "active" : ""}
+                        onClick={(event) => handleLinkClick(event, link.name)}
+                        >
+                        {link.name}
+                    </a>
+                ))}
             </div>
         </div>
-    )
+    );
 }

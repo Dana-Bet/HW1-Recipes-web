@@ -1,49 +1,36 @@
-///////////////////////// Template ////////////////////////
+/////////// Template (This is our main page, what changes is only the components) //////////////
 
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route
-// } from "react-router-dom"
-
+import React, { useState } from 'react';
 import NavBar from "./components/Navbar";
-
-// import Home from "./pages/Home";
-// import Recipe from "./pages/Recipe";
-// import Share from "./pages/Share";
-// import Shopping from "./pages/Shopping"
-// import Nutrition from "./pages/Nutrition"
-
-import HomeSection from "./components/HomeSection";
+import Home from "./pages/Home";
+import Recipes from "./pages/Recipes";
+import PlanMeal from "./pages/Plan";
+import Share from "./pages/Share";
+import Shopping from "./pages/Shopping";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('Home'); // Base state in the main page
+
+  // Function for changing the current component change
+  const handlePageChange = (pageName) => {
+    setCurrentPage(pageName);
+  };
+
   return (
-    <>
-      <div className="App">
-        <NavBar />
-        <div className="container main"><HomeSection /></div>
+    <div>
+      <NavBar currentPage={currentPage} onPageChange={handlePageChange} />
+      <div className="container main">
+        {currentPage === 'Home' && <Home />}
+        {currentPage === 'Recipes' && <Recipes />}
+        {currentPage === 'Plan Meal' && <PlanMeal />}
+        {currentPage === 'Share' && <Share />}
+        {currentPage === 'Shopping' && <Shopping />}
       </div>
-
-      {/* This should work but doesnt 
-        <Router>
-        <NavBar />
-        <div className="container main">
-          <Routes>
-            <Route path="/Home" element={<Home />} />
-            <Route path="/Recipe" element={<Recipe />} />
-            <Route path="/Share" element={<Share />} />
-            <Route path="/Shopping" element={<Shopping />} />
-            <Route path="/Nutrition" element={<Nutrition />} />
-          </Routes>
-        </div>
-      </Router> */}
-
-      {/* ///////////////////////// End Of Template //////////////////////// */}
-
-      {/* This is the end of the html page */}
-
-    </>
-  )
+      <div>Footer</div>
+    </div>
+  );
 }
 
 export default App;
+
+////////////////////////// End Of Template /////////////////////////////
